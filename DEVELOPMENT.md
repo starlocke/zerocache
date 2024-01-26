@@ -27,7 +27,7 @@ Wtihin a pipenv shell, virtual environment:
 (Linux)
 
 ```sh
-PYTHONPATH=src coverage run --append -m pytest tests/test_manual_integration.py tests/test_network_fallback.py
+./tests/run_tests.sh
 ```
 
 
