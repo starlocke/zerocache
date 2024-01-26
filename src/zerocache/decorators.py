@@ -4,8 +4,8 @@ from .client import ZerocacheClient
 
 def auto_zerocache(region, expiry=60):
     def decorator(func):
-        client = ZerocacheClient.get_instance(region)
         def call(*args, **kwargs):
+            client = ZerocacheClient.get_instance(region)
             args_hash = md5()
             for arg in args:
                 args_hash.update(str(arg).encode('utf-8'))
