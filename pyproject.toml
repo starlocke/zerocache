@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zeroconf_starlocke"
+version = "0.0.1"
+authors = [
+  { name="Victor Yap", email="starlocke@gmail.com" },
+]
+description = "A dead-simple, zeroconf-based expansion of 'cachetools' TLRUCache, with multi-region redundancy"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)"
+]
+dependencies = [
+  "requests",
+  "bottle",
+  "zeroconf",
+  "cachetools",
+  "paste"
+]
+
+[project.urls]
+Homepage = "https://github.com/starlocke/zerocache"
+Issues = "https://github.com/starlocke/zerocache/issues"
