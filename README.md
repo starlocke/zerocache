@@ -31,24 +31,24 @@ flowchart TB
     node_Y
     node_Z
     client_3
-    client_3 -- 1st GET --> node_X
-    client_3 -- 2nd GET --> node_Y
+    client_3 -- "1st GET" --> node_X
+    client_3 -- "2nd GET" --> node_Y
     end
     subgraph region_2
     node_K
     node_L
     node_M
     client_2
-    client_2 -- 1st GET --> node_L
-    client_2 -- 2nd GET --> node_M
+    client_2 -- "1st GET" --> node_L
+    client_2 -- "2nd GET" --> node_M
     end
     subgraph region_1
     node_A
     node_B
     node_C
     client_1
-    client_1 -- 1st GET --> node_A
-    client_1 -- 2nd GET --> node_B
+    client_1 -- "1st GET" --> node_A
+    client_1 -- "2nd GET" --> node_B
     end
 ```
 
@@ -68,26 +68,26 @@ flowchart LR
     node_Y
     node_Z
     client_3
-    node_X -- put, recursion --> node_Y
-    node_X -- put, recursion --> node_Z
+    node_X -- "put, recursion" --> node_Y
+    node_X -- "put, recursion" --> node_Z
     end
     subgraph region_2
     node_K
     node_L
     node_M
     client_2
-    node_K -- put, recursion --> node_L
-    node_K -- put, recursion --> node_M
+    node_K -- "put, recursion" --> node_L
+    node_K -- "put, recursion" --> node_M
     end
     subgraph region_1
     node_A
     node_B
     node_C
-    client_1 -- PUT (key, value) --> node_A
-    node_A -- PUT, recursion --> node_B
-    node_A -- PUT, recursion --> node_C
-    node_A -- PUT, remote --> node_K
-    node_A -- PUT, remote --> node_X
+    client_1 -- "PUT, key, value" --> node_A
+    node_A -- "PUT, recursion" --> node_B
+    node_A -- "PUT, recursion" --> node_C
+    node_A -- "PUT, remote" --> node_K
+    node_A -- "PUT, remote" --> node_X
     end
 ```
 
@@ -113,10 +113,10 @@ flowchart LR
     node_B
     node_C
     client_1
-    client_1 -- 1st GET (0.5s failed) --> node_A
-    client_1 -- 2nd GET (0.5s failed) --> node_B
-    client_1 -- 3rd GET (0.75s failed) --> node_K
-    client_1 -- 4th GET (1.0s last-chance) --> node_X
+    client_1 -- "1st GET (0.5s failed)" --> node_A
+    client_1 -- "2nd GET (0.5s failed)" --> node_B
+    client_1 -- "3rd GET (0.75s failed)" --> node_K
+    client_1 -- "4th GET (1.0s last-chance)" --> node_X
     end
 ```
 
